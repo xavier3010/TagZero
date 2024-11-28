@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Container and Row Styles */
+.structure-container {
+  display: flex;
+  justify-content: center;
+  background: #F7F8FD;
+  padding: 20px 50px 50px 50px;
+  transform: translateY(100px); /* Initially positioned below the viewport */
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth slide-up and fade-in */
+}
+
+.structure-container.in-view {
+  transform: translateY(0); /* Slide up into place */
+  opacity: 1; /* Fade in when in view */
+}
+
+.structure-row {
+  display: flex;
+  width: 80%;
+}
+
+/* Card Styles */
+.structure-card {
+  flex: 1; /* Ensures equal width for all cards */
+  background: #F7F8FD;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0; /* Remove gaps */
+}
+
+/* Icon Styles */
+.structure-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+}
+
+.structure-icon img {
+  width: 20px;
+  height: 26px;
+}
+
+/* Title Styles */
+.structure-title {
+  color: #1b1d21;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 21.6px;
+  margin-top: 0px;
+}
+
+/* Divider Styles */
+.structure-divider {
+  width: 0; /* Start with 0 width */
+  height: 2px;
+  margin: 10px 0px;
+  background: #00D444;
+  transition: width 0.3s ease-in-out;
+}
+
+
+.structure-card:hover .structure-divider {
+  width: 100%; /* Expand the width to full on hover */
+}
+
+/* Description Styles */
+.structure-description {
+  color: #6d6d6d;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .structure-row {
+    flex-wrap: wrap;
+  }
+
+  .structure-card {
+    flex: 1 1 100%; /* Cards will stack in smaller screens */
+    max-width: 100%;
+  }
+}

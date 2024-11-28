@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Gruppo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* General Styles */
+.who-container {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.who-filled-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #356745; /* Replace with the desired background color */
+  transition: all 0.3s ease-in-out;
+  opacity: 0; /* Initially hidden */
+  z-index: -1; /* To make sure it's behind the content */
+}
+
+.who-section-in-view {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+.who-content {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+}
+
+.who-header-width{
+  width: 50%;
+  position: relative;
+}
+.who-header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.who-about-us {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 150px;
+    box-shadow: 0px 9px 15px rgba(85, 109, 145, 0.08);
+    border-radius: 65px;
+    padding: 4px 17px;
+    gap: 10px;
+}
+
+.who-gradient-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(207deg, #00c8ff 23%, #a90c0c 82%);
+}
+
+.who-about-us-text {
+    color: #52525C;
+    font-size: 11px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+.who-heading .who-main-text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: none;
+}
+
+.who-heading .who-sub-text {
+    color: white;
+    text-transform: none;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.who-info-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 20px; /* Space between the cards */
+    margin: 10px 20px;
+    position: relative;
+    margin-left: auto;
+    width: 43%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.who-card:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.who-card {
+    background: #119637;
+    padding: 20px;
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure positioning works */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+/* General card styles */
+.who-card-design {
+    position: absolute;
+    bottom: -40px; /* Adjust spacing as needed */
+    right: -40px;
+    width: 90px; /* Width of the container (circular shape) */
+    height: 90px; /* Height of the container (circular shape) */
+    padding: 20px; /* Spacing inside the element */
+    background: #09E436; /* Optional background color */
+    border-radius: 50%; /* Makes it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Specific background images for each card */
+.who-we-are-design {
+    background-image: url('../../asserts/images/who-we-wre2.svg');
+    background-size: 30px 20px; 
+    background-position: 13px 20px;
+}
+
+.who-values-design {
+    background-image: url('../../asserts/images/Our-values.svg');
+    background-size: 30px 20px; 
+    background-position: 13px 20px;
+}
+
+.who-mission-design {
+    background-image: url('../../asserts/images/Our-mission.svg');
+    background-size: 30px 20px; 
+    background-position: 13px 20px;
+}
+
+.who-why-choose-us-design {
+    background-image: url('../../asserts/images/why-choose-us.svg');
+    background-size: 30px 20px; 
+    background-position: 13px 20px;
+}
+
+.who-card-header {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.who-card-body {
+    font-size: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.who-learn-more {
+    font-size: 12px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .who-header-section {
+        padding: 30px 10px;
+    }
+    .who-info-section {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 4px 0px;
+        width: 50%;
+        gap: 10px;
+    }
+    
+
+    .who-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .who-heading .who-main-text {
+        font-size: 24px;
+    }
+    .who-info-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Creates 2 columns */
+    }
+
+    .who-heading .who-sub-text {
+        font-size: 18px;
+    }
+}

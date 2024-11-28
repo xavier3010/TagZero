@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Container for the entire section */
+.work-container {
+    width: 100%;
+    padding: 4vw 14vw 0vw 13vw;
+    background: #F7F8FD;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Align content to left and right */
+    align-items: flex-start; /* Align items to the top */
+    box-sizing: border-box;
+    position: relative; /* Add relative positioning for animation */
+}
+
+/* Initially, the content is hidden off-screen */
+.work-content {
+    opacity: 0; /* Make elements invisible initially */
+    transform: translateX(-100%); /* Position work content off-screen to the left */
+    transition: all 0.8s ease-out; /* Smooth transition for sliding in */
+}
+
+/* Initially, the image is hidden off-screen */
+.work-img-content {
+    opacity: 0; /* Make elements invisible initially */
+    transform: translateX(100%); /* Position work image off-screen to the right */
+    transition: all 0.8s ease-out; /* Smooth transition for sliding in */
+}
+
+/* When the section comes into view, slide elements into position */
+.work-container.in-view .work-content {
+    opacity: 1;
+    transform: translateX(0); /* Slide content from the left */
+}
+
+.work-container.in-view .work-img-content {
+    opacity: 1;
+    transform: translateX(0); /* Slide image from the right */
+}
+
+/* Inner content wrapper */
+.work-content {
+    width: 44%; /* Adjust width for responsiveness */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    margin-left: 30px;
+}
+
+/* Adjust content width for smaller screens */
+@media (max-width: 768px) {
+    .work-content {
+        width: 100%; /* Full width for smaller screens */
+        text-align: center; /* Center text for better readability */
+        margin: 0; /* Remove side margins */
+    }
+}
+
+/* Heading wrapper */
+.work-heading {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 2.5vw;
+}
+
+@media (max-width: 768px) {
+    .work-heading {
+        text-align: center; /* Center align for smaller screens */
+    }
+}
+
+/* Heading text styling */
+.work-heading span {
+    color: #0A1636;
+    font-size: 2.5vw; /* Responsive font size */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.45px;
+}
+
+@media (max-width: 768px) {
+    .work-heading span {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+}
+
+/* How We Work Section */
+.how-we-work {
+    padding: 8px 15px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(85, 109, 145, 0.08);
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%; /* Adjusted for smaller screens */
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Adjust text size inside How We Work */
+.how-we-work-text {
+    padding: 0 10px;
+    font-size: 0.7rem;
+    margin: 0; /* Smaller font size for responsiveness */
+}
+
+@media (max-width: 768px) {
+    .how-we-work-text {
+        font-size: 0.6rem; /* Adjust for smaller screens */
+    }
+    .how-we-work {
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Text sections with general styling */
+.text-section {
+    color: #6D6D6D;
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin-bottom: 0.7rem;
+    text-align: left;
+}
+
+/* General styling for text */
+.bold {
+    font-weight: 700; /* Ensure strong bold appearance */
+    color: #0A1636; /* Match heading color */
+    font-family: 'Poppins', sans-serif; /* Apply correct font family */
+}
+
+.light {
+    font-weight: 300; /* Light font weight */
+    color: #0A1636; /* Match heading color */
+    font-family: 'Poppins', sans-serif; /* Apply correct font family */
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        font-size: 0.6rem; /* Adjust text size for smaller screens */
+        text-align: center; /* Center align text */
+    }
+}
+
+/* Image wrapper */
+.work-img-content {
+    width: 50%; /* Adjust width for responsiveness */
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* Image styling */
+.work-image {
+    width: 100%;
+    max-width: 675px; /* Prevent image from exceeding width */
+    height: auto;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .work-img-content {
+        width: 100%; /* Full width on smaller screens */
+        justify-content: center; /* Center align image */
+    }
+
+    .work-image {
+        max-width: 90%; /* Reduce max width for smaller screens */
+    }
+}

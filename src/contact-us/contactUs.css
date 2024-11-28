@@ -1,0 +1,159 @@
+.contact-modal-header {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.69);
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+.back {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.2188px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #8692A6;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+/* General Modal Styles */
+.modal-dialog {
+    max-width: 100%; /* Increased horizontal size */
+    margin: auto; /* Center the modal */
+    height: auto;
+}
+  
+.modal-content {
+    padding: 0px; /* Removed all padding */
+    font-size: 10px; /* Further reduce font size */
+    border-radius: 8px; /* Slight rounding for aesthetics */
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+.modal-body {
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    max-height: calc(100vh - 60px); /* Restrict content to fit within the screen */
+    padding: 0px 2px 0px 2px; /* Removed top padding */
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+/* Modal Header */
+.contact-modal-header {
+    font-weight: 800;
+    font-size: 14px; /* Reduced size */
+    line-height: 18px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: #000000;
+    padding: 0; /* Reduced padding */
+}
+  
+/* Subheaders and Paragraphs */
+.modalp {
+    font-weight: 600;
+    font-size: 12px; /* Reduced size */
+    line-height: 16px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: #000000;
+    margin-bottom: 3px; /* Reduced margin */
+}
+  
+.modalText {
+    font-weight: 500; /* Lighter for readability */
+    font-size: 10px; /* Reduced size */
+    line-height: 14px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 5px; /* Reduced margin */
+}
+  
+/* Count and Process Section */
+.modalCount {
+    font-weight: 700;
+    font-size: 18px; /* Reduced size for better responsiveness */
+    line-height: 22px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: #000000;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.modal.fade {
+    transition: none !important;
+}
+  
+.modalCountLine {
+    width: 20px; /* Smaller line */
+    height: 0px;
+    border: 2px solid #03BF71; /* Adjust border thickness */
+}
+  
+.modalCountHead {
+    font-weight: 600;
+    font-size: 8px; /* Reduced font size */
+    line-height: 12px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: rgba(0, 0, 0, 0.69);
+}
+  
+.modalCountText {
+    font-weight: 400;
+    font-size: 8px; /* Smaller font for supporting text */
+    line-height: 12px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: rgba(0, 0, 0, 0.7);
+}
+  
+/* Form Fields */
+option {
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+/* Form Fields */
+input.inputField, select.inputField, textarea.inputField {
+    font-size: 8px; /* Smaller text size */
+    padding: 5px; /* Reduced padding */
+    margin-bottom: 15px; /* Slightly reduced bottom margin */
+    width: 90%; /* Full width of the container */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f1f1f1;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    color: #000000; /* Text color for contrast */
+}
+  
+.form-label {
+    font-size: 12px; /* Smaller font size for labels */
+    font-weight: 500; /* Slightly lighter weight */
+    line-height: 10px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+textarea.inputField {
+    font-size: 10px; /* Smaller text size for textarea */
+    padding: 6px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+}
+  
+/* Submit Button */
+button.modalSubmit {
+    background: #03bf71;
+    border: none;
+    color: #f7f7f7;
+    font-size: 12px; /* Smaller button font size */
+    padding: 4px 10px; /* Adjusted padding */
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    width: 90%; /* Ensure button spans full width */
+}
+  
+button.modalSubmit:hover {
+    box-shadow: inset 0 0 1px yellow;
+    background: #047244;
+    transition: 0.2s;
+}

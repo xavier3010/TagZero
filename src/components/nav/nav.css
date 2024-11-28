@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Gruppo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Gruppo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+.nav-container {
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    background: white;
+    box-shadow: 4px 4px 30px rgba(42, 67, 113, 0.15);
+    border-bottom: 1px solid #6D6D6D;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    position: fixed; /* Make sure parent is relative for absolute positioning of the hamburger */
+}
+
+/* Header for logo and toggle */
+.nav-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70% ; /* You can also use margin-left if you want to add some left margin */
+    height: auto;
+}
+
+
+/* Logo styling */
+.nav-logo-img {
+    height: 25px;
+}
+
+/* Navigation links container */
+.nav-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual navigation items */
+.nav-item {
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #1A1B1E;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-item .nav-underline {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: #00D444;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .nav-underline {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Contact button */
+.nav-contact {
+    opacity: 0; /* Hidden by default */
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(20px); /* Moves down slightly */
+    z-index: 1000; /* Ensure above other elements */
+}
+
+.nav-contact.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to its final position */
+}
+/* Contact button */
+.nav-contact-btn {
+    padding: 5px 0px;
+    background: #00D444;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    align-items: center;
+    width: 100px;
+    margin-left: 0px; /* Added margin-left to move the button to the left */
+}
+
+.nav-contact-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* Hamburger menu styling */
+.nav-toggle-btn {
+    display: block;
+    position: absolute;
+    top: 10px; /* Adjust vertical positioning */
+    right: 20px; /* Align hamburger to the right corner */
+    z-index: 10; /* Ensure it's above other elements */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    visibility: hidden;
+}
+
+.nav-toggle-btn .hamburger {
+    width: 90%;
+    height: 2px;
+    background-color: #1A1B1E;
+    border-radius: 2px;
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-toggle-btn .hamburger:before,
+.nav-toggle-btn .hamburger:after {
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: #1A1B1E;
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-toggle-btn .hamburger:before {
+    top: -8px;
+}
+
+.nav-toggle-btn .hamburger:after {
+    top: 8px;
+}
+
+.nav-toggle-btn .hamburger.open {
+    background-color: transparent;
+}
+
+.nav-toggle-btn .hamburger.open:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle-btn .hamburger.open:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: space-between;
+    }
+    .nav-contact {
+
+        top: 8px;
+        right: 50px;
+    }
+
+    .nav-links-container {
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 9;
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-contact-btn {
+        padding: 6px 10px;
+    }
+
+    .nav-links-container.open {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10% ; /* You can also use margin-left if you want to add some left margin */
+        height: auto;
+    }
+
+    .nav-toggle-btn {
+        display: block;
+        position: absolute;
+        top: 10px; /* Adjust vertical positioning */
+        right: 20px; /* Align hamburger to the right corner */
+        z-index: 10; /* Ensure it's above other elements */
+        visibility: visible;
+    }
+
+    .nav-toggle-btn .hamburger {
+        width: 80%;
+        height: 2px;
+        background-color: #1A1B1E;
+        border-radius: 2px;
+        position: absolute;
+        right: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-toggle-btn .hamburger:before,
+    .nav-toggle-btn .hamburger:after {
+        content: '';
+        width: 80%;
+        height: 2px;
+        background-color: #1A1B1E;
+        border-radius: 2px;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-toggle-btn .hamburger:before {
+        top: -8px;
+    }
+
+    .nav-toggle-btn .hamburger:after {
+        top: 8px;
+    }
+
+    .nav-toggle-btn .hamburger.open {
+        background-color: transparent;
+    }
+
+    .nav-toggle-btn .hamburger.open:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle-btn .hamburger.open:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .nav-contact-btn {
+        padding: 6px 10px;
+        margin-right: 30px;
+    }
+}

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Gruppo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Box Container */
+.box {
+    position: relative;
+    width: 70%; /* Reduced width for smaller cards */
+    max-width: 800px; /* Limit the max width */
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+    grid-template-rows: auto; /* Adjust rows automatically */
+    gap: 10px; /* Reduced gap between cards */
+    padding: 15px; /* Slightly reduced padding */
+    margin: 0 auto;
+    margin-bottom: 40px; /* Center the box horizontally */
+    justify-items: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+}
+.box.fade-in {
+    opacity: 1;
+  }
+
+/* Square Card Style */
+.property-web-development, 
+.property-app-development, 
+.property-digital-marketing,
+.property-marketing-analytics,
+.property-web-deployment,
+.property-software-development {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Reduced padding for square cards */
+    text-align: center;
+    height: 170px; /* Make the height the same as width for a square shape */
+    width: 200px; /* Fixed width to make it square */
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    transition: transform 0.3s ease, background-image 0.3s ease, color 0.3s ease, filter 0.3s ease; /* Smooth scale and background image transition */
+    background-color: #fff; /* Default background */
+}
+
+/* Card hover effect */
+.property-web-development:hover,
+.property-app-development:hover,
+.property-digital-marketing:hover,
+.property-marketing-analytics:hover,
+.property-web-deployment:hover,
+.property-software-development:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Change background image on hover */
+.property-web-development:hover {
+    background-image: url('../../asserts/images/web-back.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.property-app-development:hover {
+    background-image: url('../../asserts/images/mobile-app-back.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.property-digital-marketing:hover {
+    background-image: url('../../asserts/images/digital-back.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Added hover background images for the remaining services */
+.property-marketing-analytics:hover {
+    background-image: url('../../asserts/images/marketing-analytics-back.png'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.property-web-deployment:hover {
+    background-image: url('../../asserts/images/web-deployment-back.png'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.property-software-development:hover {
+    background-image: url('../../asserts/images/software-development-back.png'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Change text color to white on hover */
+.property-web-development:hover .heading-web-development,
+.property-app-development:hover .heading-app-development,
+.property-digital-marketing:hover .heading-digital-marketing,
+.property-marketing-analytics:hover .heading-marketing-analytics,
+.property-web-deployment:hover .heading-web-deployment,
+.property-software-development:hover .heading-software-development {
+    color: white; /* Change heading text color to white */
+}
+
+.property-web-development:hover .p-web-development,
+.property-app-development:hover .p-app-development,
+.property-digital-marketing:hover .p-digital-marketing,
+.property-marketing-analytics:hover .p-marketing-analytics,
+.property-web-deployment:hover .p-web-deployment,
+.property-software-development:hover .p-software-development {
+    color: white; /* Change paragraph text color to white */
+}
+
+/* Change logo color to #00d444 on hover (using filter) */
+.property-web-development:hover .img.web-development,
+.property-app-development:hover .img.app-development,
+.property-digital-marketing:hover .img.digital-marketing,
+.property-marketing-analytics:hover .img.marketing-analytics,
+.property-web-deployment:hover .img.web-deployment,
+.property-software-development:hover .img.software-development {
+    filter: hue-rotate(90deg) saturate(6) brightness(1.1); /* Change logo color */
+}
+
+/* Component within the card */
+.component-web-development, 
+.component-app-development, 
+.component-digital-marketing,
+.component-marketing-analytics,
+.component-web-deployment,
+.component-software-development {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+.heading-web-development,
+.heading-app-development,
+.heading-digital-marketing,
+.heading-marketing-analytics,
+.heading-web-deployment,
+.heading-software-development {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px; /* Smaller font size */
+    color: #1b1d21;
+    margin-bottom: 8px; /* Reduced space below heading */
+}
+
+/* Paragraph Styles */
+.p-web-development,
+.p-app-development,
+.p-digital-marketing,
+.p-marketing-analytics,
+.p-web-deployment,
+.p-software-development {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 10px; /* Smaller font size */
+    color: #6d6d6d;
+    line-height: 1.5; /* Adjusted line height */
+    text-align: center;
+    margin-top: 8px; /* Reduced margin */
+}
+
+
+/* Image Styles */
+.img {
+    width: 30px; /* Smaller icon size */
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 10px; /* Reduced space between icon and text */
+    filter: grayscale(100%); /* Default black color */
+}
+
+/* Specific Background Images for each card */
+.img.web-development {
+    background-image: url('../../asserts/images/Web-develop-logo.svg');
+}
+
+.img.app-development {
+    background-image: url('../../asserts/images/mobile-ogo.svg');
+}
+
+.img.digital-marketing {
+    background-image: url('../../asserts/images/digital-market-logo.svg');
+}
+
+.img.marketing-analytics {
+    background-image: url('../../asserts/images/marketing-analytics-logo.svg');
+}
+
+.img.web-deployment {
+    background-image: url('../../asserts/images/web-deployment-logo.svg');
+}
+
+.img.software-development {
+    background-image: url('../../asserts/images/software-development-logo.svg');
+}
+
+/* Change logo color to #00d444 on hover for all 6 cards */
+
+.property-marketing-analytics:hover .img.marketing-analytics,
+.property-web-deployment:hover .img.web-deployment,
+.property-software-development:hover .img.software-development {
+    filter: grayscale(0%) sepia(100%) saturate(8000%) hue-rotate(110deg) brightness(250%); /* #00d444 green color on hover */
+}
+
+.property-web-development:hover .img.web-development,
+.property-app-development:hover .img.app-development,
+.property-digital-marketing:hover .img.digital-marketing{
+    filter: invert(26%) sepia(93%) saturate(4500%) hue-rotate(112deg) brightness(150%) contrast(110%);
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .box {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .box {
+        width: 100%;
+        padding: 10px;
+        grid-template-columns: 2fr; /* 1 column for small screens */
+        grid-template-rows: auto; /* Allow rows to be auto-sized */
+    }
+
+    /* Adjust the cards to be more responsive */
+    .property-web-development, .property-app-development, .property-digital-marketing,
+    .property-marketing-analytics, .property-web-deployment, .property-software-development {
+        height: 200px; /* Adjust the height for smaller screen sizes */
+        width: 200px; /* Adjust the width for smaller screen sizes */
+    }
+
+    .component-web-development, .component-app-development, .component-digital-marketing,
+    .component-marketing-analytics, .component-web-deployment, .component-software-development {
+        padding: 8px;
+    }
+
+    .img {
+        width: 30px; /* Even smaller icon size */
+        height: 30px;
+    }
+
+    .heading-web-development, .heading-app-development, .heading-digital-marketing,
+    .heading-marketing-analytics, .heading-web-deployment, .heading-software-development {
+        font-size: 12px; /* Further reduced font size */
+    }
+
+    .p-web-development, .p-app-development, .p-digital-marketing,
+    .p-marketing-analytics, .p-web-deployment, .p-software-development {
+        font-size: 10px; /* Further reduced paragraph font size */
+    }
+}

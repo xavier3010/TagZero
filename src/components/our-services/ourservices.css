@@ -1,0 +1,143 @@
+/* Root CSS variables for easy theming */
+:root {
+    --primary-bg: #00d444;
+    --secondary-bg: rgba(255, 255, 255, 1);
+    --primary-font-color: #ffffff;
+    --secondary-font-color: #52525c;
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+.property {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding: 20px; /* Adjust padding to control space */
+    border-radius: 0px;
+}
+
+/* Pseudo-element for the sliding background */
+.property::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;  /* Start with zero width */
+    height: 100%;
+    background-color: var(--primary-bg); /* Green background */
+    transition: width 1s ease-out;  /* Animate the width */
+    z-index: -1;  /* Make sure the background is behind the text */
+}
+
+/* When the section is visible, trigger the animation */
+.property.animate-bg::before {
+    width: 100%;
+}
+
+/* The rest of your section content */
+.group {
+    max-width: 600px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially positioned below */
+    transition: opacity 1s ease, transform 1s ease; /* Animation properties */
+}
+
+/* When the section is visible, trigger the group animation */
+.property.animate-bg .group {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to normal position */
+}
+
+/* Heading and text styles */
+.heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-font-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-family: var(--font-family);
+    font-weight: 600;
+    color: var(--primary-font-color);
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.backgroundShadow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 40px;
+    box-shadow: 0px 9px 15px rgba(85, 109, 145, 0.08);
+    position: relative;
+}
+
+.gradient {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgb(15, 210, 237) 23.37%, rgb(0, 141, 243) 82.22%);
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gradient2 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgb(15, 210, 237) 23.37%, rgb(0, 141, 243) 82.22%);
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.textWrapper {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--secondary-font-color);
+    font-size: 7px;
+    letter-spacing: 0px;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text {
+        font-size: 18px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 16px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Gruppo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+/* Stats.css */
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    
+  }
+  
+  .stats-wrapper {
+    width: 70%;
+    background: #00D029;
+    display: flex; /* Changed to flex */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stats-content {
+    flex: 1;
+    padding: 20px 0px; /* Added padding to create space on both ends */
+    background: linear-gradient(180deg, #13CE47 0%, #35781F 85%);
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: row; /* Align items horizontally */
+    gap: 0px; /* Space between stat boxes */
+    max-width: 100%; /* Prevent exceeding screen width */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .stat-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 150px; /* Minimum width for stat boxes */
+    flex: 1;
+    box-sizing: border-box; /* Prevent padding from affecting width */
+  }
+  
+  .stat-number {
+    color: white;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    line-height: 32px;
+    word-wrap: break-word;
+    transition: all 0.5s ease; /* Smooth transition */
+  }
+  
+  .stat-label {
+    color: white;
+    font-size: 8px; /* Adjusted font size */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 14px;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    display: inline-flex;
+    align-items: center;
+    gap: 4.65px;
+  }
+  
+  .stat-label::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  
