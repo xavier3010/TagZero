@@ -79,17 +79,17 @@ const ContactUsModal = (props) => {
   return (
     <>
       {/* Main Contact Us Modal */}
-      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal" size="lg" centered aria-labelledby="example-custom-modal-styling">
+      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal" centered aria-labelledby="example-custom-modal-styling">
         <Modal.Body>
           <div className="px-3">
             <div className="row mb-4">
               <div className="col-2 back">
-                <small>
-                  <img src={Back} alt="Back" style={{ cursor: "pointer" }} onClick={handleCloseModal} />
-                  <span className="ms-2">Back</span>
+                <small onClick={handleCloseModal}>
+                  <img src={Back} alt="Back" style={{ cursor: "pointer" }}  />
+                  <span className="ms-2" style={{ cursor: "pointer" }}>Back</span>
                 </small>
               </div>
-              <div className="col-8 contact-modal-header text-center" style={{ fontSize: "18px" }}>
+              <div className="col-12 contact-modal-header" >
                 Have an Idea?
               </div>
             </div>
