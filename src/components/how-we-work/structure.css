@@ -35,18 +35,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 60px;
+  height: 80px;
 }
 
 .structure-icon img {
-  width: 20px;
-  height: 26px;
+  width: 30px;
+  height: 36px;
 }
 
 /* Title Styles */
 .structure-title {
   color: #1b1d21;
-  font-size: 13px;
+  font-size: 19px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   line-height: 21.6px;
@@ -70,12 +70,29 @@
 /* Description Styles */
 .structure-description {
   color: #6d6d6d;
-  font-size: 10px;
+  font-size: 13px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 20px;
 }
 
+@media (max-width: 1024px){
+  .structure-description {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .structure-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 21.6px;
+  }
+  .structure-icon img {
+    width: 20px;
+    height: 26px;
+  }
+  
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .structure-row {

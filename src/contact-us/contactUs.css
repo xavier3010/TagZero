@@ -6,11 +6,12 @@
     color: rgba(0, 0, 0, 0.69);
     font-family: 'Poppins', sans-serif; /* Changed to Poppins */
 }
+
   
 .back {
     font-style: normal;
     font-weight: 600;
-    font-size: 14.2188px;
+    font-size: 14px;
     line-height: 17px;
     display: flex;
     align-items: center;

@@ -10,11 +10,10 @@
   text-align: center;
 }
 * {
-  box-sizing: border-box; /* Ensures padding/border don't expand the element's width */
+  box-sizing: border-box;
 }
 
 html, body {
-  padding: 0;
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;

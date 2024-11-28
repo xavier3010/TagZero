@@ -4,7 +4,7 @@
     justify-content: center; /* Center items vertically */
     align-items: center;
     text-align: center; /* Center text inside elements */
-    margin: 50px 0px 0px 0px; /* Remove any default margin */
+    padding: 50px 0px 0px 0px; /* Remove any default margin */
   }
   
   .case-study {
@@ -20,16 +20,26 @@
   }
   
   .case-study-text {
-    padding: 0 10px;
-    font-size: 0.7rem;
+    padding: 5px 30px;
+    font-size: 1rem;
     margin: 0;
   }
   
   .case-heading {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     margin-top: 10px;
     text-align: center;
   }
   
+  @media (max-width: 1024px) {
+    .case-heading {
+      font-size: 1.5rem;
+    }
+    .case-study-text {
+      padding: 0 10px;
+      font-size: 0.7rem;
+      margin: 0;
+    }
+  }

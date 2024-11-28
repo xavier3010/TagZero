@@ -3,7 +3,7 @@
 /* Box Container */
 .box {
     position: relative;
-    width: 70%; /* Reduced width for smaller cards */
+    width: 100%; /* Reduced width for smaller cards */
     max-width: 800px; /* Limit the max width */
     height: auto;
     opacity: 0;
@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
     grid-template-rows: auto; /* Adjust rows automatically */
-    gap: 10px; /* Reduced gap between cards */
+    gap: 40px;
     padding: 15px; /* Slightly reduced padding */
     margin: 0 auto;
     margin-bottom: 40px; /* Center the box horizontally */
@@ -20,6 +20,8 @@
 }
 .box.fade-in {
     opacity: 1;
+    align-items: center;
+    justify-content: center;
   }
 
 /* Square Card Style */
@@ -33,11 +35,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Reduced padding for square cards */
+    padding: 0px; /* Reduced padding for square cards */
     text-align: center;
-    height: 170px; /* Make the height the same as width for a square shape */
-    width: 200px; /* Fixed width to make it square */
-    box-sizing: border-box;
+    height: 250px; /* Make the height the same as width for a square shape */
+    width: 300px; /* Fixed width to make it square */
     border: 1px solid #e7e7e7;
     transition: transform 0.3s ease, background-image 0.3s ease, color 0.3s ease, filter 0.3s ease; /* Smooth scale and background image transition */
     background-color: #fff; /* Default background */
@@ -145,7 +146,7 @@
 .heading-software-development {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 12px; /* Smaller font size */
+    font-size: 18px; /* Smaller font size */
     color: #1b1d21;
     margin-bottom: 8px; /* Reduced space below heading */
 }
@@ -159,7 +160,7 @@
 .p-software-development {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 10px; /* Smaller font size */
+    font-size: 14px; /* Smaller font size */
     color: #6d6d6d;
     line-height: 1.5; /* Adjusted line height */
     text-align: center;
@@ -169,8 +170,8 @@
 
 /* Image Styles */
 .img {
-    width: 30px; /* Smaller icon size */
-    height: 30px;
+    width: 50px; /* Smaller icon size */
+    height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 10px; /* Reduced space between icon and text */
@@ -217,10 +218,51 @@
 }
 
 
+
+
+
+
 @media screen and (max-width: 1024px) and (min-width: 769px) {
     .box {
-        grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
+
+    .property-web-development, 
+    .property-app-development, 
+    .property-digital-marketing,
+    .property-marketing-analytics,
+    .property-web-deployment,
+    .property-software-development {
+        height: 170px; /* Make the height the same as width for a square shape */
+        width: 200px; /* Fixed width to make it square */
+    }
+    .heading-web-development,
+    .heading-app-development,
+    .heading-digital-marketing,
+    .heading-marketing-analytics,
+    .heading-web-deployment,
+    .heading-software-development {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    /* Paragraph Styles */
+    .p-web-development,
+    .p-app-development,
+    .p-digital-marketing,
+    .p-marketing-analytics,
+    .p-web-deployment,
+    .p-software-development {
+        font-size: 10px; /* Smaller font size */
+    }
+
+
+    /* Image Styles */
+    .img {
+        width: 30px; /* Smaller icon size */
+        height: 30px;
+    }
+
 }
 
 

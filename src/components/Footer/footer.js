@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
 import logo from '../../asserts/images/logo.svg';
+import ContactUsModal from '../../contact-us/ContactUsModal'; // Adjust the path as needed
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  // Function to toggle modal visibility
+  const toggleModal = (isOpen) => {
+    setShowModal(isOpen);
+  };
+
   return (
     <div className="footer-container">
       {/* Footer Banner Section */}
@@ -13,13 +21,14 @@ const Footer = () => {
           </div>
           <div className="footer-banner-title">NEED A CONSULTATION?</div>
           <div className="footer-contact-button">
-            <button>Contact Us</button>
+            <button onClick={() => toggleModal(true)}>Contact Us</button>
           </div>
         </div>
       </div>
 
       {/* Footer Links Section */}
       <div className="footer-links">
+        {/* Existing Footer Content */}
         <div className="footer-links-column">
           <h3>Company</h3>
           <ul>
@@ -30,35 +39,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Services List */}
-        <div className="footer-links-column">
-          <h3>Services</h3>
-          <ul>
-            <li>Web Development</li>
-            <li>Mobile Development</li>
-            <li>On-Demand Apps</li>
-            <li>IT Services</li>
-            <li>iOS & Android</li>
-          </ul>
-        </div>
-
-        {/* New Section (Expertise List) */}
-        <div className="footer-links-column expertise-column">
-          <h3>Our Expertise</h3>
-          <ul>
-            <li>E-Commerce Applications</li>
-            <li>Business Management Apps</li>
-            <li>Booking Applications</li>
-            <li>Healthcare Services</li>
-            <li>Social Media Platforms</li>
-          </ul>
-        </div>
-
-        {/* Subscribe Section */}
-        <div className="footer-links-column subscribe-column">
-          <h3>Subscribe</h3>
-          <p className="footer-p">Follow our newsletter to stay updated about agency.</p>
-        </div>
+        {/* Other columns */}
+        {/* ... */}
       </div>
 
       {/* Footer Bottom Section */}
@@ -70,6 +52,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Include Contact Us Modal */}
+      <ContactUsModal showModal={showModal} updateModal={toggleModal} />
     </div>
   );
 };

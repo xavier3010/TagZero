@@ -86,14 +86,14 @@
 
 /* How We Work Section */
 .how-we-work {
-    padding: 8px 15px;
+    padding: 12px 25px;
     background: white;
     box-shadow: 0px 5px 15px rgba(85, 109, 145, 0.08);
     border-radius: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%; /* Adjusted for smaller screens */
+    max-width: 60%; /* Adjusted for smaller screens */
     margin-bottom: 10px;
     margin-left: 0;
     margin-right: auto;
@@ -103,7 +103,7 @@
 /* Adjust text size inside How We Work */
 .how-we-work-text {
     padding: 0 10px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin: 0; /* Smaller font size for responsiveness */
 }
 
@@ -122,7 +122,7 @@
 /* Text sections with general styling */
 .text-section {
     color: #6D6D6D;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
     margin-bottom: 0.7rem;
@@ -141,7 +141,11 @@
     color: #0A1636; /* Match heading color */
     font-family: 'Poppins', sans-serif; /* Apply correct font family */
 }
-
+@media (max-width: 1024px) {
+    .text-section {
+        font-size: 0.7rem; /* Adjust text size for smaller screens */
+    }
+}
 @media (max-width: 768px) {
     .text-section {
         font-size: 0.6rem; /* Adjust text size for smaller screens */

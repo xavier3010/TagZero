@@ -60,6 +60,13 @@ const Carousel = () => {
     pauseOnHover: false, // Prevent stopping on hover
     responsive: [
       {
+        breakpoint: 2048, // For tablets and below
+        settings: {
+          slidesToShow: 4, // Show 3 cards for tablets
+          slidesToScroll: 1,
+        },
+      },
+      {
         breakpoint: 1024, // For tablets and below
         settings: {
           slidesToShow: 3, // Show 3 cards for tablets

@@ -40,7 +40,7 @@ const Who = () => {
   
         if (containerRect.top < 30 && containerRect.bottom > headerHeight) {
           header.style.position = 'fixed';
-          header.style.top = '28px';
+          header.style.top = '48px';
           header.style.width = '50%';
         } else if (containerRect.bottom-10 <= headerHeight) {
           header.style.position = 'absolute';

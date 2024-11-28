@@ -15,10 +15,17 @@ const Nav = () => {
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const offset = -80; // Adjust this value as needed
+            const topPosition = section.getBoundingClientRect().top + window.scrollY + offset;
+    
+            window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth',
+            });
         }
         setIsOpen(false); // Close the menu after clicking a section
     };
+    
 
     const handleModalToggle = (show) => {
         setShowModal(show); // This toggles the modal visibility

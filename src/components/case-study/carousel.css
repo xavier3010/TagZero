@@ -19,8 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 70%; /* Flexible width */
-    max-width: 250px; /* Maximum width */
+    width: 250px; /* Maximum width */
     box-sizing: border-box;
     position: relative;
     overflow: hidden; /* Prevents content from overflowing */
@@ -40,6 +39,17 @@
     z-index: -1; /* Makes sure the cut-out doesn’t overlap the card content */
 }
 
+.carousel-card {
+    background:#ffffff; /* Default light gray background */
+    transition: background 0.3s ease-in-out, transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.carousel-card:hover {
+    background: #00D444; /* White background on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25); /* Enhanced shadow for hover effect */
+}
+
 
 /* Slick-specific styling */
 .slick-track {
@@ -51,6 +61,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    
 }
 
 .card-logo {
@@ -59,7 +70,10 @@
     object-fit: cover;
     border-radius: 50%;
 }
-
+.carousel-card:hover .card-title,
+.carousel-card:hover .card-content p {
+    color: #ffffff;
+}
 .card-title {
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
@@ -67,13 +81,14 @@
     color: #141517;
 }
 .card-content{
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .card-content p {
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
-    line-height: 16px;
+    line-height: 19px;
     color: #2f2f2f;
+
 }
 
 .card-content strong {
@@ -93,21 +108,22 @@
 
 /* For tablets and small screens */
 @media (max-width: 1024px) {
-    .carousel-card {
-        max-width: 350px; /* Reduce card width for smaller screens */
-    }
+
     .slick-track {
         gap: 15px; /* Reduce space between slides */
     }
     .slick-slide {
         padding: 0 5px;
     }
+    .carousel-card {
+        width: 250px;
+    }
 }
 
 /* For mobile screens */
 @media (max-width: 768px) {
     .carousel-card {
-        max-width: 300px; /* Further reduce card width */
+        width: 200px; /* Further reduce card width */
     }
     .slick-track {
         gap: 10px; /* Further reduce space between slides */

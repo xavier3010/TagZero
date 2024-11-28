@@ -79,7 +79,7 @@ const ContactUsModal = (props) => {
   return (
     <>
       {/* Main Contact Us Modal */}
-      <Modal show={showModal} onHide={handleCloseModal} size="lg" centered aria-labelledby="example-custom-modal-styling">
+      <Modal show={showModal} onHide={handleCloseModal} className="custom-modal" size="lg" centered aria-labelledby="example-custom-modal-styling">
         <Modal.Body>
           <div className="px-3">
             <div className="row mb-4">

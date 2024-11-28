@@ -33,7 +33,7 @@ const Work = () => {
       <div className="work-content">
         <div className="how-we-work">
           <div style={{ width: '8px', height: '8px', background: 'linear-gradient(207deg, #0FD2ED 23%, #008DF3 82%)', borderRadius: '6px' }}></div>
-          <h3 className="how-we-work-text">How We Work</h3>
+          <h4 className="how-we-work-text">How We Work</h4>
           <div style={{ width: '8px', height: '8px', background: 'linear-gradient(207deg, #0FD2ED 23%, #008DF3 82%)', borderRadius: '6px' }}></div>
         </div>
         <div className="work-heading">
