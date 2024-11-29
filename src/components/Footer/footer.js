@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
 import logo from '../../asserts/images/logo.svg';
+import ContactUsModal from '../../contact-us/ContactUsModal'; // Adjust the path as needed
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = (status) => {
+    setShowModal(status);
+  };
+
   return (
     <div className="footer-container">
       {/* Footer Banner Section */}
@@ -13,7 +20,7 @@ const Footer = () => {
           </div>
           <div className="footer-banner-title">NEED A CONSULTATION?</div>
           <div className="footer-contact-button">
-            <button>Contact Us</button>
+            <button onClick={() => toggleModal(true)}>Contact Us</button>
           </div>
         </div>
       </div>
@@ -30,7 +37,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Services List */}
         <div className="footer-links-column">
           <h3>Services</h3>
           <ul>
@@ -42,7 +48,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* New Section (Expertise List) */}
         <div className="footer-links-column expertise-column">
           <h3>Our Expertise</h3>
           <ul>
@@ -54,7 +59,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Subscribe Section */}
         <div className="footer-links-column subscribe-column">
           <h3>Subscribe</h3>
           <p className="footer-p">Follow our newsletter to stay updated about agency.</p>
@@ -70,6 +74,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Us Modal */}
+      <ContactUsModal showModal={showModal} updateModal={toggleModal} />
     </div>
   );
 };

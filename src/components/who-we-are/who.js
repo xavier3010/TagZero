@@ -38,13 +38,15 @@ const Who = () => {
         const containerRect = container.getBoundingClientRect();
         const headerHeight = header.offsetHeight;
   
-        if (containerRect.top < 30 && containerRect.bottom > headerHeight) {
+        if (containerRect.top < 35 && containerRect.bottom > headerHeight) {
           header.style.position = 'fixed';
-          header.style.top = '48px';
+          header.style.top = '60px';
           header.style.width = '50%';
-        } else if (containerRect.bottom-10 <= headerHeight) {
+          header.style.height = '35%';
+        } else if (containerRect.bottom <= headerHeight) {
           header.style.position = 'absolute';
-          header.style.top = `${container.offsetHeight-30 - headerHeight}px`;
+          header.style.width = '100%';
+          header.style.top = `${container.offsetHeight+70 - headerHeight}px`;
         } else {
           header.style.position = 'absolute';
           header.style.top = '0px';

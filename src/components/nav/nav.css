@@ -58,6 +58,7 @@
     cursor: pointer;
     position: relative;
     padding: 10px 0;
+    transition:  0.2s ease;
 }
 
 .nav-item .nav-underline {
@@ -74,6 +75,9 @@
 
 .nav-item:hover .nav-underline {
     transform: translateX(-50%) scaleX(1);
+}
+.nav-item:hover {
+    color: #00D444; /* Change text color on hover */
 }
 
 /* Contact button */
